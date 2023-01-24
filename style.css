@@ -1,0 +1,148 @@
+body {
+ background: rgb(238,174,202);
+ background: linear-gradient(189deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1{
+  text-align: center;
+  padding: 50px;
+  color: #152247;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-cards {
+  width: 25%;
+  margin-bottom: 70px;
+  border: 2px solid #FAF3FB;
+  border-radius: 10px;
+  transition: transform .2s;
+}
+
+.project-cards:hover {
+  transform: scale(1.03)
+}
+
+.card {
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.img{
+  border-radius: 10px 10px 0 0;
+  margin: 10px;
+  height:55%;
+  cursor: pointer;
+}
+
+.img img{
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.txt {
+ border-radius: 0 0 10px 10px;
+ background-color: transparent;
+ padding: 30px;
+ text-align: center;
+}
+
+.txt h3 {
+  font-family: 'Cinzel', serif;
+  font-family: 'Maven Pro', sans-serif;
+  color: #152247;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 13px 25px 13px 25px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.8
+
+}
+
+.btn:hover {
+  opacity: 1;
+  transition: all .3s linear;
+}
+
+.desc {
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  height:0;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+ transition: all .5s linear;
+}
+
+.desc p{
+  padding: 20px;
+}
+
+#closeBtn {
+  position: absolute;
+  top:0;
+  right:0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#closeBtn:hover{
+  color: #CA8CFA;
+  transition: all .3s linear;
+}
+
+.position {
+  position: absolute;
+  bottom:0;
+  height: 100px;
+  overflow: scroll;
+  transition: all .7s linear;
+}
+
+@media(max-width:900px){
+  .project-cards {
+    width: 45%;
+  }
+}
+
+@media(max-width:764px) {
+  .container{
+    width: 80%;
+    flex-direction: column;
+  }
+
+ .project-cards {
+   width: 100%;
+ }
+
+ .card {
+  width: 100%;
+  height: 100%;
+ }
+
+ .img{
+   height: 60%;
+ }
+}
